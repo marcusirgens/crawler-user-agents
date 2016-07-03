@@ -1,0 +1,15 @@
+{
+    "name": "marcuspi/crawler-user-agents",
+    "description": "php class to check user agents against monperrus/crawler-user-agents",
+    "license": "CC-BY-SA-3.0",
+    "authors": [
+        {
+            "name": "Marcus Pettersen Irgens",
+            "email": "marcus.pettersen.irgens@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": ["crawler-user-agents.php"]
+    }
+}
