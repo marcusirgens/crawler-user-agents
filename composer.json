@@ -11,5 +11,6 @@
     "require": {},
     "autoload": {
         "files": ["crawler-user-agents.php"]
-    }
+    },
+    "minimum-stability": "dev"
 }
