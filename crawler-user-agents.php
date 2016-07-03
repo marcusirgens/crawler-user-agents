@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace marcuspi/Crawlers
+namespace marcuspi;
 
 class Crawlers
 {
     public $crawlers = [];
     
     private function __construct() {
-        $this->crawlers = json_decode(file_get_contents("crawler-user-agents.json"), true);
+        $this->crawlers = json_decode(file_get_contents(__DIR__ . '/crawler-user-agents.json'), true);
     }
     
     public function getCrawlers() {
@@ -28,8 +28,10 @@ class Crawlers
         }, (new static())->getCrawlers());
         
         foreach($patterns as $pattern) {
-            if(preg_match('/' . $pattern . '/', $pattern)) return true;
+            if(preg_match('/' . $pattern . '/', $agent)) return true;
         }
         
         return false;
     }
+
+}
